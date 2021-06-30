@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_login"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/image_login"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_do_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/rubik_medium_italic"
+        android:text="@string/login"
+        android:textColor="@color/colorTitles"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_login" />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/typingField"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/enter_a_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_do_login" />
+
+    <EditText
+        android:id="@+id/et_password_login"
+        style="@style/typingField"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/enter_a_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <TextView
+        android:id="@+id/esqueceu_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:text="@string/forgot_your_password"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/et_password_login"
+        app:layout_constraintTop_toBottomOf="@+id/et_password_login" />
+
+    <Button
+        android:id="@+id/button_biometry"
+        style="@style/buttonStyle"
+        android:background="@drawable/button_biometry_rounded"
+        android:drawableLeft="@drawable/icon_biometry_24"
+        android:text="@string/biometry"
+        android:textColor="#8B949B"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_sign_in"
+        app:layout_constraintEnd_toStartOf="@+id/esqueceu_senha"
+        app:layout_constraintStart_toStartOf="@+id/et_password_login"
+        app:layout_constraintTop_toTopOf="@+id/button_sign_in" />
+
+    <Button
+        android:id="@+id/button_sign_in"
+        style="@style/buttonStyle"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_orange_rounded"
+        android:text="@string/sign_in"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/esqueceu_senha"
+        app:layout_constraintStart_toStartOf="@+id/esqueceu_senha"
+        app:layout_constraintTop_toBottomOf="@+id/esqueceu_senha" />
+
+    <TextView
+        android:id="@+id/tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/icon_arrow_forward_24"
+        android:drawablePadding="10dp"
+        android:drawableTint="@color/colorTitles"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/create_an_account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

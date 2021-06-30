@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">JOBLINK</string>
+
+    <!-- Strings Login -->
+    <string name="login">Faça Login</string>
+    <string name="enter_a_email">Digite seu email</string>
+    <string name="enter_a_password">Digite uma senha</string>
+    <string name="biometry">Biometria</string>
+    <string name="sign_in">Entrar</string>
+    <string name="forgot_your_password">Esqueceu sua senha ?</string>
+    <string name="create_an_account">Criar Conta</string>
+
+    <!-- Strings record choice  !-->
+    <string name="select">Ao selecionar o perfil, você será encaminhado(a) para a página escolhida.</string>
+    <string name="title_choice">Bem-vindo(a) ao JobLink!</string>
+    <string name="select_profile">Selecione o seu perfil.</string>
+    <string name="freelancer">Freelancer</string>
+    <string name="client">Cliente</string>
+
+    <!-- Strings de Cadastro -->
+    <string name="name">Nome Completo</string>
+    <string name="gender">Sexo</string>
+    <string name="birth_date_register">Data de Nascimento</string>
+    <string name="cpf_register">Digite seu CPF</string>
+    <string name="address_register">Insira seu endereço</string>
+    <string name="email_register">E-mail</string>
+    <string name="password_register">Senha</string>
+
+    <!-- List Publication -->
+    <string name="contact">Entrar em Contato</string>
+
+    <!-- List Professions  -->
+    <string name="descriptions_profession_image">Imagens da Profissão</string>
+
+    <!-- SearchFragment -->
+    <string name="seek_a_profession">Busque por uma profissão</string>
+    <string name="categories">Categorias</string>
+
+</resources>

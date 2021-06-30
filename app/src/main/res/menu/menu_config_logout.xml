@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/publish"
+        android:icon="@drawable/icon_publish"
+        android:title="Publicar"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/icon_exit"
+        android:title="Sair"
+        app:showAsAction="always" />
+
+</menu>

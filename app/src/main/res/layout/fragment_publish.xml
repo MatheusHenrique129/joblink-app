@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PublishFragment">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView1"-->
+    <!--        android:layout_width="350dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:text="@string/criar"-->
+    <!--        android:textSize="28dp"-->
+    <!--        android:textColor="@android:color/black"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="14dp"/>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginTop="75dp"-->
+    <!--        android:text="@string/description"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:layout_marginLeft="15dp"/>-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="370dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginTop="115dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:background="@drawable/background_redondo"/>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_marginTop="230dp"-->
+    <!--        android:text="@string/image"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:layout_marginLeft="15dp"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="360dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:layout_marginTop="280dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:background="@drawable/background_redondo"-->
+    <!--        android:drawableLeft="@drawable/image_24"-->
+    <!--        android:paddingLeft="170dp"/>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="300dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_marginTop="460dp"-->
+    <!--        android:text="@string/urgencia"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:layout_marginLeft="15dp"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:background="@drawable/button_urgencia3"-->
+    <!--        android:layout_marginTop="500dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:text="@string/urgencia1"-->
+    <!--        android:textColor="@android:color/white"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:background="@drawable/button_urgencia2"-->
+    <!--        android:layout_marginTop="550dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:text="@string/urgencia2"-->
+    <!--        android:textColor="@android:color/white"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:background="@drawable/button_urgencia1"-->
+    <!--        android:layout_marginTop="600dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:text="@string/urgencia3"-->
+    <!--        android:textColor="@android:color/white"/>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="160dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:background="@drawable/button_orange_rounded"-->
+    <!--        android:layout_marginTop="550dp"-->
+    <!--        android:layout_marginLeft="225dp"-->
+    <!--        android:text="@string/publicar"-->
+    <!--        android:textColor="@android:color/white"/>-->
+
+
+
+
+</RelativeLayout>

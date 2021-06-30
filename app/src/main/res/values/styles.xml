@@ -1,0 +1,59 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="typingField">
+        <item name="fontFamily">@font/rubik</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/edge_field</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:layout_width">125dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="titleToolbar">
+        <item name="fontFamily">@font/rubik_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="caption" parent="TextAppearance.AppCompat.SearchResult.Title">
+        <item name="fontFamily">@font/rubik_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/colorTitles</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_height">55dp</item>
+        <!--        <item name="android:background">@drawable/botao_register</item>-->
+    </style>
+
+    <style name="edit_text_scrollView">
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_width">269dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <!--        <item name="android:background">@drawable/botao_register</item>-->
+    </style>
+
+    <style name="ContainerComponents">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">320dp</item>
+    </style>
+
+</resources>
