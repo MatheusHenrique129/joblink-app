@@ -57,15 +57,15 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val token = sessionManager.fethAuthToken()
 
         if (token == null) {
-            logout()
-        } else {
-            val jwt = JWT(token)
-
-            if (jwt.isExpired(0)) {
-                notifyUser("Sua sessão expirou")
-                logout()
-            }
-        }
+            logout() }
+//        } else {
+//            val jwt = JWT(token)
+//
+//            if (jwt.isExpired(0)) {
+//                notifyUser("Sua sessão expirou")
+//                logout()
+//            }
+//        }
     }
 
     private fun logout() {

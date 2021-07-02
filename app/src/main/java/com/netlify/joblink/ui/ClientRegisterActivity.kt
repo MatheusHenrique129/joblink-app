@@ -134,7 +134,7 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
                 selectPhotoGalery()
             }
             R.id.btn_register_client -> {
-                validarCampos()
+                //validarCampos()
                 registered()
             }
         }

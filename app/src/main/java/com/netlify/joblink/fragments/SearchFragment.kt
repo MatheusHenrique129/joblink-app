@@ -9,12 +9,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.netlify.joblink.R
+import com.netlify.joblink.adapter.ProfessionAdapter
+import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment() {
 
     private lateinit var rvCategory: RecyclerView
-    //private lateinit var adapterProfission: ProfessionAdapter
-    // private lateinit var profileFragment: ProfileFragment
+    private lateinit var adapterProfission: ProfessionAdapter
+    private lateinit var profileFragment: ProfileFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,10 +39,10 @@ class SearchFragment : Fragment() {
     }
 
     private fun startRecycleView() {
-        // rvCategory = recycleViewSearch
-        //  adapterProfission = ProfessionAdapter(activity)
+        rvCategory = recycle_view_search
+        adapterProfission = ProfessionAdapter(activity)
         rvCategory.layoutManager =
             GridLayoutManager(activity, 2, LinearLayoutManager.VERTICAL, false)
-        //  rvCategory.adapter = adapterProfission
+        rvCategory.adapter = adapterProfission
     }
 }

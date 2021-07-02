@@ -14,7 +14,8 @@
         android:roundIcon="@drawable/logo_joblink"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.RegisterFreelancerActivity"></activity>
+        <activity android:name=".ui.ChatActivity"></activity>
+        <activity android:name=".ui.RegisterFreelancerActivity" />
         <activity android:name=".ui.ClientRegisterActivity" />
         <activity android:name=".ui.ClientOrFreelancerRegisterActivity" />
         <activity android:name=".ui.MessageActivity" />
