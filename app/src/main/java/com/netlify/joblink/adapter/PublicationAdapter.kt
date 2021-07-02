@@ -8,8 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.github.rtoshiro.util.format.SimpleMaskFormatter
+import com.github.rtoshiro.util.format.text.MaskTextWatcher
 import com.netlify.joblink.R
 import com.netlify.joblink.model.PublicationModel
+import com.netlify.joblink.ui.birthDateRegister
 
 class PublicationAdapter(val context: FragmentActivity?) :
     RecyclerView.Adapter<PublicationAdapter.PublicationViewHolder>() {
@@ -38,6 +41,11 @@ class PublicationAdapter(val context: FragmentActivity?) :
         Glide.with(context!!).load(publication.image).into(holder.ivImage)
 
         holder.tvNameUser.text = publication.userModel.name
+
+
+        val maskDate: SimpleMaskFormatter = SimpleMaskFormatter("NN/NN/NNNN")
+        val mtwDate: MaskTextWatcher = MaskTextWatcher(holder.tvDatePublication, maskDate)
+        holder.tvDatePublication.addTextChangedListener(mtwDate)
 
         holder.tvDatePublication.text = publication.datePublication
         holder.tvProfission.text = publication.profission

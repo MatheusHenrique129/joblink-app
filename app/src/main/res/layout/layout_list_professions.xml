@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="@dimen/material_emphasis_high_type"
-                android:background="@drawable/img_mecanico"
+                android:background="@drawable/img_professions"
                 android:contentDescription="@string/descriptions_profession_image"
                 android:scaleType="fitXY" />
 
