@@ -29,6 +29,16 @@
     <!-- List Publication -->
     <string name="contact">Entrar em Contato</string>
 
+    <!-- Strings de Publicação !-->
+    <string name="create_publication">Criar publicação</string>
+    <string name="description">Descrição:</string>
+    <string name="image">Imagem (opcional)</string>
+    <string name="urgencia">Urgência:</string>
+    <string name="urgencia1">Baixa</string>
+    <string name="urgencia2">Média</string>
+    <string name="urgencia3">Alta</string>
+    <string name="publish">Publicar</string>
+
     <!-- List Professions  -->
     <string name="descriptions_profession_image">Imagens da Profissão</string>
 

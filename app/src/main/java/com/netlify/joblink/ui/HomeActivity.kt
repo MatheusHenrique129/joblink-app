@@ -57,8 +57,9 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val token = sessionManager.fethAuthToken()
 
         if (token == null) {
-            logout() }
-//        } else {
+            logout()
+        }
+//        else {
 //            val jwt = JWT(token)
 //
 //            if (jwt.isExpired(0)) {
@@ -98,6 +99,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 notifyUser("Você fez Logout")
             }
             R.id.publish -> {
+                setFragment(publishFragment)
             }
         }
 

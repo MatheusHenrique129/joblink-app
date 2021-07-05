@@ -1,99 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.PublishFragment">
 
-    <!--    <TextView-->
-    <!--        android:id="@+id/textView1"-->
-    <!--        android:layout_width="350dp"-->
-    <!--        android:layout_height="50dp"-->
-    <!--        android:text="@string/criar"-->
-    <!--        android:textSize="28dp"-->
-    <!--        android:textColor="@android:color/black"-->
-    <!--        android:textStyle="bold"-->
-    <!--        android:layout_marginLeft="20dp"-->
-    <!--        android:layout_marginTop="14dp"/>-->
 
-    <!--    <TextView-->
-    <!--        android:layout_width="150dp"-->
-    <!--        android:layout_height="32dp"-->
-    <!--        android:layout_marginTop="75dp"-->
-    <!--        android:text="@string/description"-->
-    <!--        android:textSize="20dp"-->
-    <!--        android:layout_marginLeft="15dp"/>-->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/create_publication"
+        android:textColor="@android:color/black"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <EditText-->
-    <!--        android:layout_width="370dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:layout_marginTop="115dp"-->
-    <!--        android:layout_marginLeft="20dp"-->
-    <!--        android:background="@drawable/background_redondo"/>-->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/description"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
-    <!--    <TextView-->
-    <!--        android:layout_width="300dp"-->
-    <!--        android:layout_height="30dp"-->
-    <!--        android:layout_marginTop="230dp"-->
-    <!--        android:text="@string/image"-->
-    <!--        android:textSize="20dp"-->
-    <!--        android:layout_marginLeft="15dp"/>-->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chat_send_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <!--    <Button-->
-    <!--        android:layout_width="360dp"-->
-    <!--        android:layout_height="150dp"-->
-    <!--        android:layout_marginTop="280dp"-->
-    <!--        android:layout_marginLeft="20dp"-->
-    <!--        android:background="@drawable/background_redondo"-->
-    <!--        android:drawableLeft="@drawable/image_24"-->
-    <!--        android:paddingLeft="170dp"/>-->
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/image"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-    <!--    <TextView-->
-    <!--        android:layout_width="300dp"-->
-    <!--        android:layout_height="30dp"-->
-    <!--        android:layout_marginTop="460dp"-->
-    <!--        android:text="@string/urgencia"-->
-    <!--        android:textSize="20dp"-->
-    <!--        android:layout_marginLeft="15dp"/>-->
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="360dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/chat_send_button"
+        android:drawableLeft="@drawable/icon_add_a_photo"
+        android:paddingLeft="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <!--    <Button-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="35dp"-->
-    <!--        android:background="@drawable/button_urgencia3"-->
-    <!--        android:layout_marginTop="500dp"-->
-    <!--        android:layout_marginLeft="15dp"-->
-    <!--        android:text="@string/urgencia1"-->
-    <!--        android:textColor="@android:color/white"/>-->
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/urgencia"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
-    <!--    <Button-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="35dp"-->
-    <!--        android:background="@drawable/button_urgencia2"-->
-    <!--        android:layout_marginTop="550dp"-->
-    <!--        android:layout_marginLeft="15dp"-->
-    <!--        android:text="@string/urgencia2"-->
-    <!--        android:textColor="@android:color/white"/>-->
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_red_urgency"
+        android:text="@string/urgencia1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:layout_editor_absoluteX="16dp" />
 
-    <!--    <Button-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="35dp"-->
-    <!--        android:background="@drawable/button_urgencia1"-->
-    <!--        android:layout_marginTop="600dp"-->
-    <!--        android:layout_marginLeft="15dp"-->
-    <!--        android:text="@string/urgencia3"-->
-    <!--        android:textColor="@android:color/white"/>-->
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_orange_urgency"
+        android:text="@string/urgencia2"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-    <!--    <Button-->
-    <!--        android:layout_width="160dp"-->
-    <!--        android:layout_height="50dp"-->
-    <!--        android:background="@drawable/button_orange_rounded"-->
-    <!--        android:layout_marginTop="550dp"-->
-    <!--        android:layout_marginLeft="225dp"-->
-    <!--        android:text="@string/publicar"-->
-    <!--        android:textColor="@android:color/white"/>-->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_green_urgency"
+        android:text="@string/urgencia3"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_orange_rounded"
+        android:text="@string/publish"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
