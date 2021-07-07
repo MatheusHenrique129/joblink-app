@@ -9,7 +9,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import com.auth0.android.jwt.JWT
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.netlify.joblink.R
 import com.netlify.joblink.api.SessionManager
@@ -122,7 +121,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 setFragment(searchFragment)
             }
             R.id.menu_message -> {
-                val intent = Intent(this, MessageActivity::class.java)
+                val intent = Intent(this, ChatActivity::class.java)
                 startActivity(intent)
             }
             R.id.menu_profile -> {

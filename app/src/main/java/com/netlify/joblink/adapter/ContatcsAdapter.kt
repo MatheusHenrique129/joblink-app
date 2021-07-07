@@ -1,5 +1,14 @@
-package com.netlify.joblink.adapter
-
+//package com.netlify.joblink.adapter
+//
+//import android.content.Context
+//import android.view.View
+//import android.view.ViewGroup
+//import android.widget.ImageView
+//import android.widget.TextView
+//import androidx.recyclerview.widget.RecyclerView
+//import com.bumptech.glide.Glide
+//import com.netlify.joblink.R
+//
 //class ContatcsAdapter(var context: Context) : RecyclerView.Adapter<ContatcsAdapter.ViewHolder>() {
 //
 //    private var listContact: List<User> = emptyList()

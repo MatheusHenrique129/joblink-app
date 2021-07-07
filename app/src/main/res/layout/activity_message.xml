@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.MessageActivity">
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2"
+        tools:listitem="@layout/layout_item_user" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
