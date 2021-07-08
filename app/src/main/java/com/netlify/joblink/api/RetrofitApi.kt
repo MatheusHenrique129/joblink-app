@@ -23,8 +23,8 @@ class RetrofitApi {
 
         fun httpClient(context: Context?): OkHttpClient {
             return OkHttpClient.Builder()
-                .readTimeout(40, TimeUnit.SECONDS)
-                .connectTimeout(40, TimeUnit.SECONDS)
+                .readTimeout(0, TimeUnit.SECONDS)
+                .connectTimeout(0, TimeUnit.SECONDS)
                 .addInterceptor(AuthInterceptor(context))
                 .build()
         }

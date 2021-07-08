@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="@string/easy_freelancer"
+        android:textAlignment="center"
+        android:textColor="@color/colorTitles"
+        android:textSize="24sp" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_photo_register"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/img_add_photo"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="2dp" />
+
+    <Button
+        android:id="@+id/btn_photo_register"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:text="Escolha uma imagem" />
+
+    <ImageView
+        android:id="@+id/Image_on_boarding"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_margin="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/img_register_freelancer"
+        android:contentDescription="@string/app_name" />
+
+
+</LinearLayout>

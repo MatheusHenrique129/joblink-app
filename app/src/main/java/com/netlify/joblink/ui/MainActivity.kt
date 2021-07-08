@@ -166,22 +166,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
             }
             R.id.button_biometry -> {
-//               Verificar se a API usada é 28 ou acima!!, para rodar o codigo
-//                val biometricPrompt = BiometricPrompt.Builder(this)
-//                    .setTitle("Logar com Biometria")
-//                    .setDescription("Este aplicativo usa proteção de impressão digital para manter seus dados seguros")
-//                    .setNegativeButton(
-//                        "Cancelar",
-//                        this.mainExecutor,
-//                        DialogInterface.OnClickListener { dialog, which ->
-//                            notifyUser("Autenticação Cancelada")
-//                        }).build()
-//
-//                biometricPrompt.authenticate(
-//                    getCancellationsSignal(),
-//                    mainExecutor,
-//                    authecationCallback
-//                )
+                //Verificar se a API usada é 28 ou acima!!, para rodar o codigo
+                val biometricPrompt = BiometricPrompt.Builder(this)
+                    .setTitle("Logar com Biometria")
+                    .setDescription("Este aplicativo usa proteção de impressão digital para manter seus dados seguros")
+                    .setNegativeButton(
+                        "Cancelar",
+                        this.mainExecutor,
+                        DialogInterface.OnClickListener { dialog, which ->
+                            notifyUser("Autenticação Cancelada")
+                        }).build()
+
+                biometricPrompt.authenticate(
+                    getCancellationsSignal(),
+                    mainExecutor,
+                    authecationCallback
+                )
             }
             R.id.tv_create -> {
                 val openRegistration = Intent(this, ClientOrFreelancerRegisterActivity::class.java)

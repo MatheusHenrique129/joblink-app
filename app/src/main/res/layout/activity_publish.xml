@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PublishFragment">
+    tools:context=".ui.PublishActivity">
 
 
     <TextView
@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="@string/create_publication"
         android:textColor="@android:color/black"
         android:textSize="28dp"
@@ -20,25 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginTop="35dp"
-        android:text="@string/description"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/chat_send_button"
+        android:hint="@string/description"
+        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <TextView
         android:id="@+id/textView11"
@@ -77,12 +68,10 @@
         android:id="@+id/button4"
         android:layout_width="160dp"
         android:layout_height="35dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/bg_red_urgency"
         android:text="@string/urgencia1"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
         tools:layout_editor_absoluteX="16dp" />
 
     <Button
@@ -93,6 +82,7 @@
         android:background="@drawable/bg_orange_urgency"
         android:text="@string/urgencia2"
         android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintStart_toStartOf="@+id/button4"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -111,8 +101,8 @@
         android:id="@+id/button2"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/button_orange_rounded"
         android:text="@string/publish"
         android:textColor="@android:color/white"

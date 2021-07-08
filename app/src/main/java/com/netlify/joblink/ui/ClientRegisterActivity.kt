@@ -84,6 +84,12 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
         startActivityForResult(Intent.createChooser(intent, "Escolha uma imagem"), 1)
     }
 
+    private fun goToHome() {
+        val homeActivity = Intent(this, HomeActivity::class.java)
+        startActivity(homeActivity)
+        finish()
+    }
+
     fun registered() {
         val userRegister = RegisterClientModel(
             name = nameRegister.text.toString(),
@@ -111,12 +117,11 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
                 if (response.isSuccessful()) {
 
                     notifyUser("Conta Criada com sucesso!")
+                    goToHome()
                 } else {
                     //Capturar o Erro e mostra para o usuario futuro
                     notifyUser("Erro ao cadastrar")
                 }
-
-                //goToHome()
             }
 
             override fun onFailure(call: Call<RegisterClientModel>, t: Throwable) {

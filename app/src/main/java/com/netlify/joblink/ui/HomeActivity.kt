@@ -14,7 +14,6 @@ import com.netlify.joblink.R
 import com.netlify.joblink.api.SessionManager
 import com.netlify.joblink.fragments.HomeFragment
 import com.netlify.joblink.fragments.ProfileFragment
-import com.netlify.joblink.fragments.PublishFragment
 import com.netlify.joblink.fragments.SearchFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -23,7 +22,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var homeFragment: HomeFragment
     private lateinit var searchFragment: SearchFragment
-    private lateinit var publishFragment: PublishFragment
     private lateinit var profileFragment: ProfileFragment
     lateinit var sessionManager: SessionManager
 
@@ -45,7 +43,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun loadData() {
         homeFragment = HomeFragment()
         searchFragment = SearchFragment()
-        publishFragment = PublishFragment()
         profileFragment = ProfileFragment()
 
         bottomNavigationView = findViewById(R.id.bottom_navigation)
@@ -98,7 +95,8 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 notifyUser("Você fez Logout")
             }
             R.id.publish -> {
-                setFragment(publishFragment)
+                val intent = Intent(this, PublishActivity::class.java)
+                startActivity(intent)
             }
         }
 
