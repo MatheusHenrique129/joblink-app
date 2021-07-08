@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -44,7 +46,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         homeFragment = HomeFragment()
         searchFragment = SearchFragment()
         profileFragment = ProfileFragment()
-
         bottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
     }

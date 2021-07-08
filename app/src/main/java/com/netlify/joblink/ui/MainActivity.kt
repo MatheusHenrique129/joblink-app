@@ -49,8 +49,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
                     super.onAuthenticationSucceeded(result)
-                    notifyUser("Sucesso na Autenticação!")
-                    startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+
+                    if (sessionManager.fethAuthToken() != null) {
+
+                        notifyUser("Sucesso na Autenticação!")
+                        startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+                        finish()
+                    }
                 }
             }
 
@@ -60,9 +65,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         loadData()
-        checkBiometricSupport()
 
         sessionManager = SessionManager(this)
+
+        val token = sessionManager.fethAuthToken()
+
+        Log.i("TOKENNN", sessionManager.fethAuthToken().toString())
+
+        if (token == null) {
+            setBiometryButton(buttonBiometry)
+        }
+
+        checkBiometricSupport()
+
 
     }
 
@@ -119,6 +134,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         } else true
     }
 
+    private fun setBiometryButton(view: View) {
+        view.visibility = View.INVISIBLE
+    }
+
     fun loggedIn() {
         val user = UserLoginModel(
             email = emailField.text.toString(),
@@ -146,6 +165,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     sessionManager.saveAuthToken(loginResponse!!.token)
 
                     Log.i("XXXXXXXXXXXXXX Login TESTEE", loginResponse.token.toString())
+
                     goToHome()
 
                 } else {
@@ -181,6 +201,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     getCancellationsSignal(),
                     mainExecutor,
                     authecationCallback
+
                 )
             }
             R.id.tv_create -> {

@@ -20,15 +20,16 @@
         <activity android:name=".ui.ClientRegisterActivity" />
         <activity android:name=".ui.ClientOrFreelancerRegisterActivity" />
         <activity android:name=".ui.MessageActivity" />
-        <activity android:name=".ui.SplashScreenActivity" />
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.HomeActivity" />
         <activity android:name=".ui.MainActivity" />
+
 
         <meta-data
             android:name="preloaded_fonts"
