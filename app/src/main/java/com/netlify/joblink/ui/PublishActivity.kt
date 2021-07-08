@@ -34,8 +34,8 @@ class PublishActivity : AppCompatActivity() {
 
     private fun loadData() {
         txtTitle = findViewById(R.id.et_title)
-        txtDescription = findViewById(R.id.et_description)
-        buttonPublish = findViewById(R.id.button_publish)
+        txtDescription = findViewById(R.id.description_publish)
+        buttonPublish = findViewById(R.id.btn_publish)
     }
 
     private fun notifyUser(message: String) {
