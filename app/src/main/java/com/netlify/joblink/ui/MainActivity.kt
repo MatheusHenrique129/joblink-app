@@ -30,15 +30,15 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var emailField: EditText
-    lateinit var passwordField: EditText
-    lateinit var buttonSignIn: Button
-    lateinit var buttonBiometry: Button
-    lateinit var goToRegister: TextView
+    private lateinit var emailField: EditText
+    private lateinit var passwordField: EditText
+    private lateinit var buttonSignIn: Button
+    private lateinit var buttonBiometry: Button
+    private lateinit var goToRegister: TextView
     lateinit var sessionManager: SessionManager
 
     private var cancellationSignal: CancellationSignal? = null
-    private val authecationCallback: BiometricPrompt.AuthenticationCallback
+    private val authenticationCallback: BiometricPrompt.AuthenticationCallback
         get() =
             @RequiresApi(Build.VERSION_CODES.P)
             object : BiometricPrompt.AuthenticationCallback() {
@@ -180,7 +180,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 biometricPrompt.authenticate(
                     getCancellationsSignal(),
                     mainExecutor,
-                    authecationCallback
+                    authenticationCallback
                 )
             }
             R.id.tv_create -> {

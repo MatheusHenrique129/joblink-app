@@ -19,7 +19,7 @@ class SessionManager(context: Context?) {
         editor.apply()
     }
 
-    fun fethAuthToken(): String? {
+    fun fetchAuthToken(): String? {
         return prefs.getString(USER_TOKEN, null)
     }
 

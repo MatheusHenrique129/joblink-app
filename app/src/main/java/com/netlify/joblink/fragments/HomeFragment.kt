@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
                 call: Call<List<PublicationModel>>,
                 response: Response<List<PublicationModel>>
             ) {
-                if (sessionManager.fethAuthToken() != null) {
+                if (sessionManager.fetchAuthToken() != null) {
 
                     Log.i("Teste", response.code().toString())
                     Log.i(
@@ -81,7 +81,7 @@ class HomeFragment : Fragment() {
                         feeds = response.body()!!
                         adapterPublication.updateListPublication(feeds)
                     } else {
-                        val jwt = JWT(sessionManager.fethAuthToken().toString())
+                        val jwt = JWT(sessionManager.fetchAuthToken().toString())
 
                         Log.i("TESTE HOMEFRAG", jwt.isExpired(0).toString())
 

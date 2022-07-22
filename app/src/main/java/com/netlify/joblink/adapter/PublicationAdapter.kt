@@ -43,7 +43,7 @@ class PublicationAdapter(val context: FragmentActivity?) :
         holder.tvNameUser.text = publication.userModel.name
 
 
-        val maskDate: SimpleMaskFormatter = SimpleMaskFormatter("NN/NN/NNNN")
+        val maskDate: SimpleMaskFormatter = SimpleMaskFormatter("NN/NN/YYYY")
         val mtwDate: MaskTextWatcher = MaskTextWatcher(holder.tvDatePublication, maskDate)
         holder.tvDatePublication.addTextChangedListener(mtwDate)
 

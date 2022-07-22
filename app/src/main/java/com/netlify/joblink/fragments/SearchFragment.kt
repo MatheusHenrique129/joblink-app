@@ -13,14 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.auth0.android.jwt.JWT
 import com.netlify.joblink.R
 import com.netlify.joblink.adapter.ProfessionAdapter
-import com.netlify.joblink.adapter.PublicationAdapter
 import com.netlify.joblink.api.RetrofitApi
 import com.netlify.joblink.api.SessionManager
-import com.netlify.joblink.api.calls.FeedCall
 import com.netlify.joblink.api.calls.ProfessionCall
 import com.netlify.joblink.model.ProfessionModel
-import com.netlify.joblink.model.PublicationModel
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_search.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -81,7 +77,7 @@ class SearchFragment : Fragment() {
                 response: Response<List<ProfessionModel>>
             ) {
 
-                if (sessionManager.fethAuthToken() != null) {
+                if (sessionManager.fetchAuthToken() != null) {
 
                     Log.i("Teste", response.code().toString())
                     Log.i(
@@ -93,7 +89,7 @@ class SearchFragment : Fragment() {
                         professions = response.body()!!
                         adapterProfission.updateListPublication(professions)
                     } else {
-                        val jwt = JWT(sessionManager.fethAuthToken().toString())
+                        val jwt = JWT(sessionManager.fetchAuthToken().toString())
 
                         Log.i("TESTE HOMEFRAG", jwt.isExpired(0).toString())
 

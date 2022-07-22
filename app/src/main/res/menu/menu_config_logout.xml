@@ -5,13 +5,13 @@
     <item
         android:id="@+id/publish"
         android:icon="@drawable/icon_publish"
-        android:title="Publicar"
-        app:showAsAction="always" />
+        android:title="@string/publish"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/logout"
         android:icon="@drawable/icon_exit"
-        android:title="Sair"
+        android:title="@string/logout"
         app:showAsAction="always" />
 
 </menu>

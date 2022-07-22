@@ -7,37 +7,42 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.netlify.joblink.R
 import com.netlify.joblink.api.SessionManager
+import com.netlify.joblink.databinding.ActivityHomeBinding
 import com.netlify.joblink.fragments.HomeFragment
 import com.netlify.joblink.fragments.ProfileFragment
 import com.netlify.joblink.fragments.SearchFragment
-import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var binding: ActivityHomeBinding
     private lateinit var homeFragment: HomeFragment
     private lateinit var searchFragment: SearchFragment
+    private lateinit var sessionManager: SessionManager
     private lateinit var profileFragment: ProfileFragment
-    lateinit var sessionManager: SessionManager
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         sessionManager = SessionManager(this)
 
-        Log.i("XXXXXXXXXXXXXX FICAR SALVO TESTEE", sessionManager.fethAuthToken().toString())
+        Log.i("XXXXXXXXXXXXXX FICAR SALVO TESTEE", sessionManager.fetchAuthToken().toString())
 
-        verifyAuthentication()
+        //verifyAuthentication()
         loadData()
         insertToolbar()
-
+        setupRefresh()
         setFragment(homeFragment)
+    }
+
+    private fun setupRefresh() {
+        //TODO
     }
 
     private fun loadData() {
@@ -45,12 +50,12 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         searchFragment = SearchFragment()
         profileFragment = ProfileFragment()
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView = binding.bottomNavigation
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
     }
 
     private fun verifyAuthentication() {
-        val token = sessionManager.fethAuthToken()
+        val token = sessionManager.fetchAuthToken()
 
         if (token == null) {
             logout()
@@ -77,8 +82,8 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     private fun insertToolbar() {
-        setSupportActionBar(include as Toolbar?)
-        supportActionBar?.title = "JOBLINK"
+        setSupportActionBar(binding.include.toolbar)
+       //supportActionBar?.title = "JOBLINK"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -87,7 +92,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when (item.itemId) {
             R.id.logout -> {
                 logout()
@@ -99,14 +103,13 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 startActivity(intent)
             }
         }
-
         return true
     }
 
 
     private fun setFragment(fragment: Fragment) {
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(R.id.frame_fragments, fragment)
+        fragmentTransition.replace(binding.frameFragments.id, fragment)
         fragmentTransition.commit()
     }
 
@@ -126,7 +129,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 setFragment(profileFragment)
             }
         }
-
         return true
     }
 }

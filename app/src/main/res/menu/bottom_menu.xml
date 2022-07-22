@@ -5,25 +5,25 @@
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/icon_home"
-        android:title="Home"
-        app:showAsAction="always" />
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_search"
         android:icon="@drawable/icon_search"
-        android:title="Buscar"
-        app:showAsAction="always" />
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/menu_message"
         android:icon="@drawable/icon_message"
-        android:title="Mensagens"
+        android:title="@string/message"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/menu_profile"
         android:icon="@drawable/icon_profile"
-        android:title="Perfil"
+        android:title="@string/profile"
         app:showAsAction="always" />
 
 </menu>

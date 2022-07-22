@@ -9,8 +9,8 @@ import com.netlify.joblink.R
 
 class ClientOrFreelancerRegisterActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var cvRegisterClient: CardView
-    lateinit var cvRegisterFreelancer: CardView
+    private lateinit var cvRegisterClient: CardView
+    private lateinit var cvRegisterFreelancer: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

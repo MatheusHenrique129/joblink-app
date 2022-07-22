@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#e64a19</color>
-    <color name="colorPrimaryDark">#c42d00</color>
-    <color name="colorAccent">#ffff8800</color>
-    <color name="colorSegundary">#ee063a</color>
-    <color name="backgroundOffice">#efefef</color>
+    <color name="colorPrimary">#E64A19</color>
+    <color name="colorPrimaryDark">#C42D00</color>
+    <color name="colorAccent">#FFFF8800</color>
+    <color name="colorSegundary">#EE063A</color>
+    <color name="backgroundOffice">#EFEFEF</color>
     <color name="colorBiometria">#EDF1FE</color>
     <color name="colorTitles">#323C49</color>
 </resources>

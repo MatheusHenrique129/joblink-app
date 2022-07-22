@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.netlify.joblink">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,14 +14,15 @@
         android:roundIcon="@drawable/logo_joblink"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.PublishActivity"></activity>
+        <activity android:name=".ui.PublishActivity"/>
         <activity android:name=".ui.ChatActivity" />
         <activity android:name=".ui.RegisterFreelancerActivity" />
         <activity android:name=".ui.ClientRegisterActivity" />
         <activity android:name=".ui.ClientOrFreelancerRegisterActivity" />
         <activity android:name=".ui.MessageActivity" />
         <activity android:name=".ui.SplashScreenActivity" />
-        <activity android:name=".ui.HomeActivity">
+        <activity android:name=".ui.HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

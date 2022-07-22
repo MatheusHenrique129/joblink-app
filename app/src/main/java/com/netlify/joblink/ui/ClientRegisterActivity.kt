@@ -68,7 +68,7 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
         val mtwDate: MaskTextWatcher = MaskTextWatcher(birthDateRegister, maskDate)
         birthDateRegister.addTextChangedListener(mtwDate)
 
-        val maskCpf: SimpleMaskFormatter = SimpleMaskFormatter("NNNNNNNNNNN")
+        val maskCpf: SimpleMaskFormatter = SimpleMaskFormatter("NNN.NNN.NNN-NN")
         val mtwCpf: MaskTextWatcher = MaskTextWatcher(cpfRegister, maskCpf)
         cpfRegister.addTextChangedListener(mtwCpf)
     }
@@ -90,7 +90,7 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
         finish()
     }
 
-    fun registered() {
+    private fun registered() {
         val userRegister = RegisterClientModel(
             name = nameRegister.text.toString(),
             email = emailRegister.text.toString(),
@@ -113,19 +113,17 @@ class ClientRegisterActivity : AppCompatActivity(), View.OnClickListener {
             ) {
 
                 //val resposeBody = response.body()
-
-                if (response.isSuccessful()) {
-
+                if (response.isSuccessful) {
                     notifyUser("Conta Criada com sucesso!")
                     goToHome()
                 } else {
+
                     //Capturar o Erro e mostra para o usuario futuro
                     notifyUser("Erro ao cadastrar")
                 }
             }
 
             override fun onFailure(call: Call<RegisterClientModel>, t: Throwable) {
-
                 notifyUser("Ops! Não foi possivel fazer a conexão.")
                 Log.e("ERRO_CONEXAO", t.message.toString())
             }

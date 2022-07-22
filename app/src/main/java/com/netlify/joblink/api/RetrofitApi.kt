@@ -21,7 +21,7 @@ class RetrofitApi {
             return retrofit.create(clazz)
         }
 
-        fun httpClient(context: Context?): OkHttpClient {
+        private fun httpClient(context: Context?): OkHttpClient {
             return OkHttpClient.Builder()
                 .readTimeout(0, TimeUnit.SECONDS)
                 .connectTimeout(0, TimeUnit.SECONDS)
