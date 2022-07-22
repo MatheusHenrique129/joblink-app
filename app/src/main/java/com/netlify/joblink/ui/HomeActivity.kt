@@ -37,12 +37,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //verifyAuthentication()
         loadData()
         insertToolbar()
-        setupRefresh()
         setFragment(homeFragment)
-    }
-
-    private fun setupRefresh() {
-        //TODO
     }
 
     private fun loadData() {
